@@ -6,6 +6,7 @@ A savings dApp on deployed on Goerli testnet
 StakeApp is a dApp that is deployed on the Goerli testnet and is available on the following link:
 
 https://savingsapp-c9b15.web.app/
+
 === Solidity backend ===
 
 StakeApp is comprised of 2 smart contracts, one for term and one for idenfinite savings, with the addition of AddressSet library by Rob Hitchens which is used for CRUD operations inside the contracts. All Solidity code is written and compiled in 0.8.0v. Along with the contracts there are also truffle test that have been written to test the main functionalities of contracts. Every interaction with the contract emits a event at the end which is later consumed by the fronted to produce a desireable UX and provide substantial feedback.
