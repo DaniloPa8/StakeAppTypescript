@@ -1,0 +1,248 @@
+.main_frame {
+  display: grid;
+  grid-template-rows: auto 5fr auto;
+  grid-template-columns: 1fr 6fr;
+  height: 100%;
+  font-family: "Montserrat Alternates", sans-serif;
+  overflow: hidden;
+  font-size: 1vw;
+}
+
+.manual {
+  grid-column: 1;
+  border: 0.2rem solid black;
+  border-radius: 10px;
+  height: 80%;
+  width: 80%;
+  margin-top: 1%;
+  font-family: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.about_us {
+  grid-column: 3;
+  border: 0.2rem solid black;
+  border-radius: 10px;
+  height: 80%;
+  width: 80%;
+  margin-top: 1%;
+  font-family: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.owner {
+  grid-column: 1;
+  border: 0.2rem solid black;
+  border-radius: 10px;
+  height: 80%;
+  width: 80%;
+  margin-top: 1%;
+  font-family: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.log_out:active,
+.owner:active {
+  background-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.manual:active,
+.about_us:active {
+  background-color: rgba(128, 0, 128, 0.3);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.log_out {
+  grid-column: 3;
+  border: 0.2rem solid black;
+  border-radius: 10px;
+  height: 80%;
+  width: 80%;
+  margin-top: 1%;
+  font-family: inherit;
+
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.main_content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  height: 100%;
+  grid-row: 2;
+  grid-column: 2;
+  font-size: 1.5vw;
+}
+.start_savings {
+  display: grid;
+  grid-template-rows: 4;
+  grid-row: 1;
+  grid-column: 1;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.start_savings:hover {
+  background-color: rgba(128, 0, 128, 0.15);
+  border-right: 0.2rem solid black;
+}
+.stop_savings:hover {
+  background-color: rgba(255, 215, 0, 0.15);
+  border-right: 0.2rem solid black;
+}
+.get_savings:hover {
+  background-color: rgba(255, 215, 0, 0.15);
+  border-left: 0.2rem solid black;
+}
+.withdraw_savings:hover {
+  background-color: rgba(128, 0, 128, 0.15);
+  border-left: 0.2rem solid black;
+}
+.withdraw_savings {
+  grid-row: 2;
+  grid-column: 2;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.stop_savings {
+  grid-row: 3;
+  grid-column: 1;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.get_savings {
+  grid-row: 4;
+  grid-column: 2;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.loading_overlay_content {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+.animate_fade {
+  animation-duration: 0.5s;
+  animation-name: animate-fade;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .main_content {
+    grid-template-columns: 1fr;
+    column-width: 100%;
+    grid-template-rows: repeat(4, 1fr);
+    overflow: scroll;
+  }
+  .main_frame {
+    font-size: 1vw;
+    grid-template-columns: 1fr 5fr;
+  }
+  .main_frame_menu_open {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: auto 5fr auto;
+    height: 100%;
+    font-family: "Montserrat Alternates", sans-serif;
+    overflow: hidden;
+    font-size: 1vw;
+  }
+  .main_content {
+    grid-column: span 2;
+  }
+
+  .log_out,
+  .owner,
+  .manual,
+  .about_us {
+    font-size: 2.5vw;
+    height: 60%;
+    width: 80%;
+    margin: 0% 5%;
+  }
+  .get_savings,
+  .withdraw_savings,
+  .start_savings,
+  .stop_savings {
+    grid-column: 1;
+    font-size: 4vw;
+  }
+  .start_savings {
+    grid-row: 1;
+  }
+  .withdraw_savings {
+    grid-row: 2;
+  }
+  .stop_savings {
+    grid-row: 3;
+  }
+  .get_savings {
+    grid-row: 4;
+  }
+
+  .start_savings {
+    background-color: rgba(128, 0, 128, 0.15);
+    border-top: solid black 0.2rem;
+    border-bottom: solid black 0.2rem;
+  }
+  .stop_savings {
+    background-color: rgba(255, 215, 0, 0.15);
+    border-top: solid black 0.2rem;
+    border-bottom: solid black 0.2rem;
+  }
+  .get_savings {
+    background-color: rgba(255, 215, 0, 0.15);
+    border-top: solid black 0.2rem;
+    border-bottom: solid black 0.2rem;
+  }
+  .withdraw_savings {
+    background-color: rgba(128, 0, 128, 0.15);
+    border-top: solid black 0.2rem;
+    border-bottom: solid black 0.2rem;
+  }
+}
+@media screen and (max-height: 600px) {
+  .get_savings,
+  .withdraw_savings,
+  .stop_savings,
+  .start_savings {
+    font-size: 2vw;
+  }
+  .manual {
+    font-size: 1.5vw;
+  }
+}
