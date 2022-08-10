@@ -1,9 +1,7 @@
 # StakeAppTypescript
 StakeAppGoerli in Typescript, deployed on Firebase and Goerli testnet
 
-A savings dApp on deployed on Goerli testnet
-
-StakeApp is a dApp that is deployed on the Goerli testnet and is available on the following link:
+Check out this dApp on the following link:
 
 https://savingsapp-c9b15.web.app/
 
